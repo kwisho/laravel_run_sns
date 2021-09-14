@@ -4,6 +4,12 @@ services:
     build: ./infra/php
     volumes:
       - ./backend:/work
+      - ./source/app:/var/www/html/app
+      - ./source/config:/var/www/html/config
+      - ./source/database:/var/www/html/database
+      - ./source/public:/var/www/html/public
+      - ./source/resources:/var/www/html/resources
+      - ./source/routes:/var/www/html/routes
 
   web:
     image: nginx:1.20-alpine
