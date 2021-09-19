@@ -24,7 +24,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/', [ArticleController::class,'index'])->middleware(['auth'])->name('article.index');
+Route::get('/', [ArticleController::class,'index'])->middleware(['auth'])->name('articles.index');
 
 Route::resource('articles',ArticleController::class)->middleware(['auth'])->except(['index','show']);
 
